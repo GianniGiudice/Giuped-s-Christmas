@@ -3,14 +3,13 @@ import {useEffect, useState} from "react";
 
 
 export const User = ({color, user}) => {
-    const selectedUser = user
     const [modalVisible, setModalVisible] = useState(false)
     const [name, setName] = useState("")
     const [link, setLink] = useState("")
     const [dataList, setDataList] = useState([])
 
     useEffect(() => {
-        const response = database.ref(selectedUser)
+        const response = database.ref(user)
         response.on('value', (snapshot) => {
             const array = snapshot.val()
             setDataList(array)
