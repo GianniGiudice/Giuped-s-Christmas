@@ -8,8 +8,12 @@ export const User = ({color, user}) => {
     const [link, setLink] = useState("")
     const [dataList, setDataList] = useState([])
 
-    useEffect((refreshDataList = refreshDataList) => {
-        refreshDataList()
+    useEffect(() => {
+        const response = database.ref(user)
+        response.on('value', (snapshot) => {
+            const array = snapshot.val()
+            setDataList(array)
+        })
     }, [])
 
     const refreshDataList = () => {
