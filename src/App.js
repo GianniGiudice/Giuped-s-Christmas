@@ -1,10 +1,8 @@
 import './App.css';
 import {User} from "./component/user";
 import {useEffect, useState} from "react";
-import {database} from "./firebaseConfig";
 
 function App() {
-    const number = 7
     const [users, setUsers] = useState([])
     const [colors, setColors] = useState([])
 

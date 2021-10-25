@@ -8,7 +8,7 @@ export const User = ({color, user}) => {
     const [link, setLink] = useState("")
     const [dataList, setDataList] = useState([])
 
-    useEffect(() => {
+    useEffect((refreshDataList = refreshDataList) => {
         refreshDataList()
     }, [])
 
@@ -60,7 +60,7 @@ export const User = ({color, user}) => {
                             return <li className="list-group-item d-flex justify-content-between align-items-start">
                                 <div className="ms-2 me-auto">
                                     <div className="fw-bold">{element.name}</div>
-                                    <a href={element.link} target="_blank">Lien vers le produit</a>
+                                    <a href={element.link} target="_blank" rel="noreferrer">Lien vers le produit</a>
                                 </div>
                                 <span className="badge bg-red rounded-pill" onClick={() => {deleteItem(index)}}>X</span>
                             </li>
