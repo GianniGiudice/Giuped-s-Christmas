@@ -26,6 +26,8 @@ export const User = ({color, user}) => {
 
     const addItem = async () => {
         setModalVisible(false)
+        setName("")
+        setLink("")
         let array = dataList ? [...dataList] : []
         array.push(
             {
