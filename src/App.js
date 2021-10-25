@@ -1,19 +1,13 @@
 import './App.css';
 import {User} from "./component/user";
-import {useEffect, useState} from "react";
 
 function App() {
-    const [users, setUsers] = useState([])
-    const [colors, setColors] = useState([])
-
-    useEffect(() => {
-        setUsers([
-            'carla', 'gianni', 'enzo', 'marion', 'laura', 'giuseppe', 'ghislaine'
-        ])
-        setColors([
-            'red', 'green', 'blue', 'orange', 'purple', 'yellow', 'dark-blue'
-        ])
-    }, [])
+    const users = [
+        'carla', 'gianni', 'enzo', 'marion', 'laura', 'giuseppe', 'ghislaine'
+    ]
+    const colors = [
+        'red', 'green', 'blue', 'orange', 'purple', 'yellow', 'dark-blue'
+    ]
 
     return (
         <div className="App">
