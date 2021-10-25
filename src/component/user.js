@@ -14,7 +14,7 @@ export const User = ({color, user}) => {
             const array = snapshot.val()
             setDataList(array)
         })
-    }, [])
+    }, [user])
 
     const refreshDataList = () => {
         const response = database.ref(user)
